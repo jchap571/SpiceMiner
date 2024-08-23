@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spice Miner</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"
+    defer></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
+  <link href="https://fonts.cdnfonts.com/css/dune-rise" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body data-bs-theme="dark">
+  <!-- Header with title only -->
+  <header class="container-fluid">
+    <section class="row text-center banner">
+      <col-12>
+        <h6 class="fw-bold fs-5">Spice Miner</h6>
+      </col-12>
+    </section>
+  </header>
+
+
+  <!-- Main clickable image for mining -->
+  <main class="container-fluid hero-img">
+    <section class="row d-flex justify-content-center"></section>
+    <div class="col-12">
+      <div class="d-flex justify-content-center">
+        <!-- needs to be clickable image tied into function to mine spice -->
+        <img onclick="mine()" class="spice" src="imgs/spice-mound.png" alt="spice">
+      </div>
+    </div>
+
+    <!-- Spice and upgrade counter row -->
+    <section class="row align-items-end justify-content-center">
+      <!-- Upgrade Bonus -->
+
+      <div class="col-3 text-center card p-1 upgrade">
+        <h3>Upgrade Bonus</h3>
+        <span id="upgradeBonus"></span>
+        <i class="mdi mdi-vacuum text-start"></i>
+        <i class="mdi mdi-tank  text-start"></i>
+
+      </div>
+
+
+      <!-- Spice Collected -->
+      <div class="col-6 text-center card p-5 bg-warning text-center justify-content-center spice-container">
+        <h5 class="">
+          <div id="spiceCollected" class="spice-card card fw-bold">Spice Collected: </div>
+        </h5>
+      </div>
+
+
+      <!-- Automatic Upgrade Counter -->
+      <div class="col-3 text-center card p-1 autoUpgrade ">
+        <h3>Automatic Upgrade Counter </h3>
+        <span id="autoUpgradeCounter"></span>
+        <i class="mdi mdi-vacuum text-start"></i>
+        <i class="mdi mdi-tank  text-start"></i>
+      </div>
+    </section>
+
+    <!-- Row with clickable buttons for 2 click upgrades, two automatic upgrades, and click and automatic stats -->
+    <section class="row p-5">
+      <!-- 2 click upgrades -->
+      <div class="col-3 text-center card mt-1 pt-1">
+        <h5>Click Upgrades</h5>
+        <div>
+          <button onclick="buyVacuumSquad()" class="mdi mdi-vacuum btn btn-outline-primary m-1">Vacuum Squad</button>
+        </div>
+        <div>
+          <button onclick="buyVacuumTank()" class="mdi mdi-tank btn btn-outline-primary m-1">Vacuum Tanks</button>
+        </div>
+      </div>
+
+
+      <!-- automatic upgrades -->
+      <div class="col-3 text-center card mt-1 pt-1">
+        <h5>Automatic Upgrades</h5>
+        <div>
+          <button class="btn btn-outline-primary m-1">Spice Enhancement</button>
+        </div>
+        <div>
+          <button class="mdi mdi-tractor btn btn-outline-primary m-1">
+
+            Autonomous Drone Tractor Section</button>
+        </div>
+      </div>
+
+
+      <!-- click stats -->
+      <div class="col-3 text-center card">
+        <h5>Click Stats</h5>
+        <div class="card">
+          <span class="card">Vacuum Squad</span>
+          <span class="card">Vacuum Tank</span>
+        </div>
+      </div>
+
+
+      <!-- automatic stats -->
+      <div class="col-3 text-center card">
+        <h5>Automatic Stats</h5>
+        <div class="p-2">
+          <span onclick="buySpiceEnhancement" class="card">Spice Enhancement</span>
+          <span onclick="buyTractorSection" class="card mdi mdi-tractor">Autonomous Drone Tractor Section</span>
+        </div>
+      </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="app.js"></script>
+</body>
+
+</html>
