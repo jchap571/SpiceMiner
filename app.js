@@ -163,7 +163,7 @@ function drawUpgradeBonus() {
   let clickBonus = calculateClickBonus()
   console.log(clickBonus)
   let bonus = document.getElementById('upgradeBonus')
-  bonus.innerHTML = `+ ${clickBonus}`
+  bonus.innerHTML = `+ ${clickBonus + 1}`
   let clickUp = null
   let clickUpQuantity = null
   let clickUpBonus = null
@@ -174,10 +174,15 @@ function drawUpgradeBonus() {
   let clickUpGradesSquadBon = clickUpgrades[0].bonus
   let clickUpgradeQuanBon = clickUpGradesSquadBon * clickUpGradesSquadQuan
   console.log(clickUpGradesSquadBon, clickUpGradesSquadQuan)
+  let clickUpgradesTankQuan = clickUpgrades[1].quantity
+  let clickUpgradesTankBon = clickUpgrades[1].bonus
+  let clickUpgradesTanQuanBon = clickUpgradesTankQuan * clickUpgradesTankBon
 
 
-  let clickStats = document.getElementById('click-stats-vacuum')
-  clickStats.innerText = `+ ${clickUpGradesSquadQuan} Squads +${clickUpgradeQuanBon} Bonus`
+  let clickStatsSquad = document.getElementById('click-stats-vacuum')
+  clickStatsSquad.innerText = `+ ${clickUpGradesSquadQuan} Squads +${clickUpgradeQuanBon} Bonus`
+  let clickStatsTank = document.getElementById('click-stats-tank')
+  clickStatsTank.innerText = `+ ${clickUpgradesTankQuan} Tanks + ${clickUpgradesTankQuan} Bonus`
 }
 
 
@@ -187,7 +192,7 @@ function drawAutoUpgrades() {
   let autoBonus = document.getElementById('autoUpgradeCounter')
   autoBonus.innerHTML = `+ ${autoUpgrades}`
   // NOTE DID SOMETHING WRONG HERE WITH VARIABLES THAT AREN'T BEING USED
-  // for (let i = 0; i < automaticUpgrades.length; i++) {
+
   //   let currentAutoUpgrades = automaticUpgrades[i]
   // //   let currentAutoUpgradesQuantity = currentAutoUpgrades.quantity
   // //   let currentAutoUpgradesBonus = currentAutoUpgrades.bonus
