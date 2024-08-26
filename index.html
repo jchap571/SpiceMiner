@@ -21,7 +21,7 @@
   <header class="container-fluid">
     <section class="row text-center banner">
       <col-12>
-        <h6 class="fw-bold fs-5">Spice Miner</h6>
+        <h6 class="fw-bold fs-2">Spice Miner</h6>
       </col-12>
     </section>
   </header>
@@ -39,11 +39,13 @@
 
     <!-- Spice and upgrade counter row -->
     <section class="row align-items-end justify-content-center">
-      <!-- Upgrade Bonus -->
 
+
+      <!-- Upgrade Bonus -->
       <div class="col-3 text-center card p-1 upgrade">
-        <h3>Upgrade Bonus</h3>
+        <h3>Click Upgrade Bonus</h3>
         <span id="upgradeBonus"></span>
+        <i class="mdi mdi-mouse-left-click"></i>
         <i class="mdi mdi-vacuum text-start"></i>
         <i class="mdi mdi-tank  text-start"></i>
 
@@ -53,7 +55,7 @@
       <!-- Spice Collected -->
       <div class="col-6 text-center card p-5 bg-warning text-center justify-content-center spice-container">
         <h5 class="">
-          <div id="spiceCollected" class="spice-card card fw-bold">Spice Collected: </div>
+          <div id="spiceCollected" class="mdi mdi-emoticon-poop spice-card card fw-bold">Spice Collected: </div>
         </h5>
       </div>
 
@@ -62,8 +64,9 @@
       <div class="col-3 text-center card p-1 autoUpgrade ">
         <h3>Automatic Upgrade Counter </h3>
         <span id="autoUpgradeCounter"></span>
-        <i class="mdi mdi-vacuum text-start"></i>
-        <i class="mdi mdi-tank  text-start"></i>
+        <i class="mdi mdi-timer"></i>
+        <i class="mdi mdi-emoticon-poop text-start"></i>
+        <i class="mdi mdi-tractor text-start"></i>
       </div>
     </section>
 
@@ -74,9 +77,11 @@
         <h5>Click Upgrades</h5>
         <div>
           <button onclick="buyVacuumSquad()" class="mdi mdi-vacuum btn btn-outline-primary m-1">Vacuum Squad</button>
+          <div class="squadBonus"></div>
         </div>
         <div>
-          <button onclick="buyVacuumTank()" class="mdi mdi-tank btn btn-outline-primary m-1">Vacuum Tanks</button>
+          <button onclick="buyVacuumTank()" class="mdi mdi-tank btn btn-outline-primary m-1">Vacuum Tank</button>
+          <div class="tankBonus"></div>
         </div>
       </div>
 
@@ -85,32 +90,38 @@
       <div class="col-3 text-center card mt-1 pt-1">
         <h5>Automatic Upgrades</h5>
         <div>
-          <button class="btn btn-outline-primary m-1">Spice Enhancement</button>
+          <button onclick="buySpiceEnhancement()" class="mdi mdi-emoticon-poop btn btn-outline-primary m-1">Spice
+            Enhancement</button>
         </div>
         <div>
-          <button class="mdi mdi-tractor btn btn-outline-primary m-1">
-
+          <button onclick="buyTractorSection()" class="mdi mdi-tractor btn btn-outline-primary m-1">
             Autonomous Drone Tractor Section</button>
         </div>
       </div>
 
 
+
       <!-- click stats -->
-      <div class="col-3 text-center card">
+      <div class="col-3 text-center click-stats card pt-2">
         <h5>Click Stats</h5>
-        <div class="card">
-          <span class="card">Vacuum Squad</span>
-          <span class="card">Vacuum Tank</span>
+        <div class="card  m-1">
+          <div id="click-stats-vacuum" class="card m-1 text-primary">Vacuum Squad</div>
+
+          <div id="click-stats-tank" class="card  m-1 text-primary">Vacuum Tank</div>
+
         </div>
       </div>
 
 
+
+
+
       <!-- automatic stats -->
-      <div class="col-3 text-center card">
+      <div class="col-3 text-center auto-stats card pt-2">
         <h5>Automatic Stats</h5>
-        <div class="p-2">
-          <span onclick="buySpiceEnhancement" class="card">Spice Enhancement</span>
-          <span onclick="buyTractorSection" class="card mdi mdi-tractor">Autonomous Drone Tractor Section</span>
+        <div class="card  m-1">
+          <div class="card mdi mdi-emoticon-poop m-1 text-primary">Spice Enhancement</div>
+          <div class="card mdi mdi-tractor m-1 text-primary">Autonomous Drone Tractor Section</div>
         </div>
       </div>
 
